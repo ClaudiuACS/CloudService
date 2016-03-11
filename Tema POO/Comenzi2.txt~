@@ -1,0 +1,42 @@
+>userinfo
+<UserName guest Password guest FirstName guest LastName guest Created 2016/01/07 01:01:08 LastLogin 2016/01/07 01:01:08
+>login root rootpass
+<Success, you are logged as root
+>userinfo
+<UserName root Password root FirstName root LastName rootpass Created 2016/01/07 01:01:08 LastLogin 2016/01/07 01:01:37
+>newuser user1 parola1 Nume1 Surname1
+<success
+>login user1 parola1
+<Success, you are logged as user1
+>userinfo
+<UserName user1 Password parola1 FirstName Nume1 LastName Surname1 Created 2016/01/07 01:02:33 LastLogin 2016/01/07 01:02:59
+>touch fisier1 200 -r-
+<Success
+>rm fisier1
+<Fail
+>login root rootpass
+<Success, you are logged as root
+>rm fisier1
+>logout
+<Success, you are logged as guest
+>mkdir myHome
+<Success
+>cd myHome
+>touch fisier1 1000 -rw-
+<Success
+>touch fisier2 3000 -rw-
+<Success
+>mkdir dir
+<Success
+>cd dir/..
+>pwd
+</home/myHome
+>rm fisier1
+<Success
+>rm fisier2
+<Success
+>rm dir
+>cd ..
+>pwd
+</home
+>exit
